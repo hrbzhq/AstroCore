@@ -1,0 +1,25 @@
+body{font-family:Inter, Arial, sans-serif;margin:0;padding:0;background:#f6f7fb;color:#0b1221}
+header{background:#1f2937;color:white;padding:12px 16px;display:flex;align-items:center;justify-content:space-between}
+header h1{margin:0;font-size:18px}
+.controls{display:flex;gap:8px;align-items:center}
+main{display:flex;height:calc(100vh - 110px)}
+#listPane{width:320px;background:white;border-right:1px solid #e6e8ef;padding:8px;overflow:auto}
+#entries{list-style:none;padding:0;margin:0}
+#entries li{padding:8px;border-bottom:1px solid #f0f2f7;cursor:pointer}
+#entries li.active{background:#eef2ff}
+#detailPane{flex:1;padding:16px}
+.panel{background:#fff;border:1px solid #e6e8ef;padding:12px;margin-bottom:12px}
+.editor{width:100%;height:320px;font-family:monospace;padding:12px;border:1px solid #dfe6f0}
+.actions{margin-top:8px}
+.actions button{margin-right:8px}
+footer{padding:8px 16px;font-size:12px;color:#6b7280}
+
+.controls label.inline-checkbox{margin-left:8px}
+
+.confidence-input{margin-top:8px}
+.preview-panel{display:none;position:fixed;right:16px;top:80px;width:360px;max-height:60vh;overflow:auto;z-index:40}
+.preview-panel h3{margin-top:0}
+.preview-list{list-style:none;padding:0;margin:0}
+.preview-list li{padding:6px;border-bottom:1px solid #eef2f6}
+.preview-top-input{width:64px}
+.backups-list-container{display:inline-block;vertical-align:middle}

@@ -1,0 +1,9 @@
+{
+  "methods": [
+    "Welch"
+  ],
+  "params": {},
+  "bandpass": null,
+  "filters": [],
+  "confidence": 0.2
+}

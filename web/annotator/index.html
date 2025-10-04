@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Extraction Annotator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+      <header>
+      <h1>Extraction Annotator</h1>
+      <div class="controls">
+        <label for="fileInput" class="visually-hidden">Load JSON file</label>
+        <input id="fileInput" type="file" accept="application/json" />
+        <button id="loadBuiltin">Load builtin report</button>
+        <button id="downloadBtn">Download Edited Report</button>
+        <button id="saveServerBtn">Save to Server</button>
+        <select id="bulkFieldSelect" title="Select field to bulk copy">
+          <option value="">Bulk copy field...</option>
+          <option value="fs">fs</option>
+          <option value="data_path">data_path</option>
+        </select>
+        <button id="bulkCopyBtn">Apply to Selected</button>
+        <label for="needsFieldsSelect" class="visually-hidden">Fields to check</label>
+        <select id="needsFieldsSelect" multiple size="3" title="Select fields to consider missing">
+          <option value="fs" selected>fs</option>
+          <option value="data_path" selected>data_path</option>
+          <option value="bandpass">bandpass</option>
+          <option value="methods">methods</option>
+        </select>
+  <label class="inline-checkbox"><input type="checkbox" id="sortByMissing" /> Sort by missing count</label>
+        <button id="exportNeedsFix">Export Needs-Fix CSV</button>
+        <label for="sortByConfidence" class="inline-checkbox"><input type="checkbox" id="sortByConfidence" /> Sort by confidence (desc)</label>
+  <label for="previewTopN">Preview top</label>
+  <input id="previewTopN" class="preview-top-input" type="number" min="1" value="10" />
+        <button id="previewBtn">Preview Needs-Fix</button>
+  <button id="listBackupsBtn">List Backups</button>
+  <div id="backupsListContainer" class="backups-list-container"></div>
+      </div>
+    </header>
+    <main>
+      <aside id="listPane">
+        <ul id="entries"></ul>
+      </aside>
+      <section id="detailPane">
+        <h2 id="detailTitle">Select an entry</h2>
+        <div id="origText" class="panel"></div>
+  <textarea id="extractionEditor" class="editor" spellcheck="false" title="Edit extracted JSON"></textarea>
+        <div class="panel">
+          <label>Confidence: <input id="confidenceInput" type="number" step="0.01" min="0" max="1" /></label>
+          <small>0-1 (optional)</small>
+        </div>
+        <div class="actions">
+          <button id="applyBtn">Apply</button>
+          <button id="revertBtn">Revert</button>
+        </div>
+      </section>
+    </main>
+  <div id="previewPanel" class="panel preview-panel">
+      <h3>Needs-Fix Preview</h3>
+      <ul id="previewList"></ul>
+      <div><button id="downloadPreview">Download Preview CSV</button><button id="closePreview">Close</button></div>
+    </div>
+    <footer>
+      <p>Open this file in your browser. To enable server save, run <code>python scripts/serve_annotator.py</code> locally.</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

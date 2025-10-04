@@ -1,0 +1,9 @@
+numpy
+scipy
+matplotlib
+
+# Optional dependencies (install only if you need the related features):
+# PyMuPDF (fitz) - PDF parsing: pip install PyMuPDF
+# spaCy - improved NLP extraction: pip install spacy
+# MNE-Python - EEG/MEG processing and ICA examples: pip install mne
+# scikit-learn - fallback ICA (FastICA): pip install scikit-learn

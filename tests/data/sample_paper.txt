@@ -1,0 +1,19 @@
+A Sample Paper Title
+
+Abstract
+This paper demonstrates a simple pipeline for analyzing sample signals.
+
+Introduction
+We describe the problem and related work.
+
+Methods
+We collected simulated EEG and computed power spectral density using Welch's method.
+
+Results
+Power at 40 Hz increased during stimulation.
+
+Discussion
+This simple demonstration shows reproducibility patterns.
+
+References
+[]
