@@ -1,0 +1,9 @@
+# CODEOWNERS: specify the users or teams that own files in the repository
+# Format: <pattern> <owner>
+
+# Owners for the Python package
+ /src/astrocore/ @hrbzhq
+
+# Owners for scripts and workflows
+ /scripts/ @hrbzhq
+ .github/workflows/* @hrbzhq

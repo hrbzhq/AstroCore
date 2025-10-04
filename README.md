@@ -1,3 +1,59 @@
+# AstroCore
+
+English and Japanese README below. The repository contains a minimal, runnable research scaffold for extracting methods/parameters from Methods sections and generating reproducible analysis notebooks.
+
+## English
+
+AstroCore is a lightweight research scaffold that can:
+
+- Parse Methods text (plain or PDF -> text) and extract common analysis methods and parameters (e.g., Welch, FFT, ICA, nperseg, window, bandpass, fs, data paths).
+- Generate starter analysis code and Jupyter notebooks from extracted parameters (Welch PSD, FFT, ICA, MNE examples).
+- Provide a web-based annotator for human-in-the-loop corrections (bulk edits, export Needs-Fix CSV, preview top-N problematic entries).
+- Maintain an audit trail with automatic backups when saving annotated reports on the local annotator server.
+
+Quick start (Windows PowerShell):
+
+1. Open the project directory:
+
+   cd "e:/tools/begin/AstroCore"
+
+2. Run unit tests (uses standard library unittest):
+
+   python -m unittest discover -s tests -v
+
+3. Start the local annotator server (serves `web/annotator/` and accepts POST /save):
+
+   python scripts/serve_annotator.py
+
+Notes:
+
+- Optional dependencies (install as needed): `PyMuPDF` for PDF parsing, `spacy` for improved NLP extraction, `mne` and `scikit-learn` for EEG/ICA examples.
+- A GitHub Actions workflow is included (`.github/workflows/ci.yml`) and runs unit tests on push and pull requests.
+
+## Japanese (日本語)
+
+AstroCore は、Methods セクションから解析手法やパラメータを抽出し、再現可能な解析ノートブックを生成するための軽量な研究用スキャフォールドです。
+
+- Methods のテキスト（PDF をテキスト化したものも可）から Welch、FFT、ICA、nperseg、window、bandpass、fs、データパス等を抽出します。
+- 抽出結果に基づいて Jupyter ノートブックや解析コードのスケルトンを自動生成します（Welch、FFT、ICA、MNE の例を含む）。
+- Web ベースのアノテーターを提供し、人手による修正や一括操作、"Needs-Fix" CSV のエクスポート、上位 N 件のプレビューなどが可能です。
+- アノテーターの保存時に自動バックアップを作成し、変更履歴を保持します。
+
+簡単な開始手順 (Windows PowerShell):
+
+1. プロジェクトディレクトリに移動:
+
+   cd "e:/tools/begin/AstroCore"
+
+2. 単体テストを実行:
+
+   python -m unittest discover -s tests -v
+
+3. ローカルアノテーターサーバーを起動:
+
+   python scripts/serve_annotator.py
+
+License, contribution guide, and more usage examples are available in the repository documentation.
 # AstroCore — 工程化星形胶质细胞辅助系统研究（最小可运行脚手架）
 
 本项目基于 `read01.txt` 的说明搭建了一个最小可运行的研究工程脚手架，目的在于：
