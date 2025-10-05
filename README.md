@@ -28,6 +28,7 @@ Quick start (Windows PowerShell):
 Notes:
 
 - Optional dependencies (install as needed): `PyMuPDF` for PDF parsing, `spacy` for improved NLP extraction, `mne` and `scikit-learn` for EEG/ICA examples.
+- Fundraising pitch (draft): See `docs/fundraising_pitch_en.md` (this branch/PR includes the draft for review).
 - A GitHub Actions workflow is included (`.github/workflows/ci.yml`) and runs unit tests on push and pull requests.
 
 ## Japanese (日本語)
