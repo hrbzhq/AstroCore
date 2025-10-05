@@ -68,7 +68,7 @@ Investment Ask & Contact
 
 Seeking: $2.5M seed round
 Use of funds: in vitro validation, device prototyping, large-animal pilots, regulatory planning
-Contact: hrbzhq (GitHub) — details available privately upon request
+Contact: hrbzhq (GitHub) — hrbzhq@163.com
 
 Conclusion
 
